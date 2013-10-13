@@ -17,6 +17,8 @@
         <script src="scripts/login.js"></script>
         <script src="scripts/location.js"></script>
         <script src="scripts/weather.js"></script>
+        <script src="scripts/typesViewModel.js"></script>
+        <script src="scripts/typeViewModel.js"></script>
         <script src="scripts/app.js"></script>
         
 
@@ -58,5 +60,18 @@
                 </div>
             </div>
         </div>
-    </body>
+        
+        <script id="type-template" type="text/x-kendo-template">            
+            <div class="weather-info" data-role="touch" data-bind="events: { tap: typeSelected }">
+                <div class="position-left">
+                    <div class="weather-info date">${Title}</div>
+                </div>
+                <div class="position-right">                   
+                    <div class="weather-info temperature low">${Distance} м.</div>
+                </div>
+               <!-- <h2>Вид: ${Title}</h2>
+                <div>Разстояние: ${Distance} метра</div>-->
+            </div>
+        </script> 
+    </body>    
 </html>

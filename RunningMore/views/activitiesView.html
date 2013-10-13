@@ -1,3 +1,37 @@
-<div data-role="view" id="view-all-activities" data-title="Типове">
-    <h1>Here are all activities</h1>
+<div data-role="view"
+     id="view-all-activities"
+     data-title="Типове"
+     data-layout="tabstrip-layout"     
+     data-show="app.typesService.init">
+    <header data-role="header">
+        <div data-role="navbar">
+            <a class="nav-button" data-align="left" data-role="button" data-icon="add" href="views/addActivityView.html"></a>
+        </div>
+    </header>
+    <div class="weather">
+        <h1>Темпо</h1>    
+        <div class="separator">
+            <div class="dark"></div>
+            <div class="light"></div>
+        </div>
+        <ul id="types-listview" 
+            data-role="listview" 
+            data-template="type-template"
+            data-bind="source: types"
+            class="forecast-list">
+            
+        </ul>
+    </div>
+        <!--<select id="categories-list" data-role="dropdownlist"
+                data-bind="source: categories, events: { change: change}"
+                data-text-field="Name"
+                data-value-field="Id">
+        </select>
+        <div id="category-info">
+            <h1 data-bind="text: selectedCategory.Name" data-align="center"></h1>            
+            <ul data-role="listview" data-bind="source: selectedCategory.Places" data-template="place-template"></ul>                
+        </div>-->               
+    
+     
 </div>
+

@@ -133,6 +133,7 @@ body, html {
     display:inline-block;
 }
 .weather-info.date {
+    float:left;
     margin-top: 7px;
 }
 .weather-info.temperature {
@@ -140,6 +141,7 @@ body, html {
 }
 
 .weather-info.temperature.low{
+    float:right;
     color:rgba(0,0,0,0.5);
 }
 
