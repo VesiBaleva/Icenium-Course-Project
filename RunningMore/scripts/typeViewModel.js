@@ -15,10 +15,11 @@ var el = new Everlive({
         console.log(e.view.params.id);
         data.getById(e.view.params.id)
         .then(function(type){
-         //   alert(JSON.stringify(data));
+            
             console.log(type);
-            viewModel.set("selectedType", type);
-            console.log(type);
+            var p= type.result;
+            viewModel.set("selectedType", p);
+            console.log(type.result);
         },
         function(error){
             alert(JSON.stringify(error));

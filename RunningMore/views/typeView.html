@@ -9,10 +9,12 @@
         </div>
     </header>
 
-    <div id="status-container" data-role="listview" data-style="inset">
+    <div id="status-container" data-style="inset">
         <div>
-            <h2 id="titleType" data-bind="text: Title"></h2>
-            <div id="distanceType" data-bind="text: Distance"></div>
+            <h2>Вид:</h2>
+            <h2 id="titleType" data-bind="text: selectedType.Title"></h2>
+            <span>Дистанция за изминаване </span><span id="distanceType" data-bind="text: selectedType.Distance"></span>
+            <span>метра</span>
         </div>        
     </div>
 </div>
