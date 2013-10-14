@@ -30,6 +30,7 @@
           console.log("The contact successfully created");
           function onSuccess(contact) {
                 alert("Save Success");
+                navigator.notification.vibrate(200);
             };
 
             function onError(contactError) {

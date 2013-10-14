@@ -54,7 +54,7 @@
             // onStatus Callback 
             function onStatus(status) {
                 if( status==Media.MEDIA_STOPPED ) {
-                    my_media.play();
+               //     my_media.play();
                 }
             }
                 

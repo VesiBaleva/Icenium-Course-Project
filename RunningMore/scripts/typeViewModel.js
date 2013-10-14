@@ -67,7 +67,7 @@ var el = new Everlive({
     
     function watchGeoLocation(){
         
-        var options = { frequency: 3000, enableHighAccuracy: true};
+        var options = { frequency: 3000, enableHighAccuracy: true, maximumAge: 10000};
         
          watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
         
