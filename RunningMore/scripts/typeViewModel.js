@@ -42,7 +42,7 @@ var el = new Everlive({
     
     function onStart() {
         
-        
+        app.audio.play();
         
         navigator.geolocation.getCurrentPosition(onSuccess,onError);
        
@@ -110,6 +110,7 @@ var el = new Everlive({
     
     function onStop() {
         clearWatch();
+        app.audio.stop();
     }
     
     function clearWatch() {

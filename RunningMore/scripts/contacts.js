@@ -1,6 +1,6 @@
 (function(a) {
     var vm = kendo.observable({
-        "name":"",
+        "name":"",        
         "number":[{
             "type":"mobile",
             "value":""
@@ -20,11 +20,16 @@
 		  phoneNumbers[1] = new ContactField('mobile', vm.number.value, false);
 		  phoneNumbers[2] = new ContactField('home',vm.number.value, true);
           myContact.phoneNumbers=phoneNumbers;
+          var photo=[1];
+          var image = document.getElementById('smallImage');
+          photo[0]=new ContactField('photo', image.src, false);
+            
+            myContact.photos=photo;
           
           myContact.save(onSuccess,onError);
           console.log("The contact successfully created");
           function onSuccess(contact) {
-                alert("Save Success "+ contact.name);
+                alert("Save Success");
             };
 
             function onError(contactError) {

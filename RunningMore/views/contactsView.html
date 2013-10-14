@@ -4,9 +4,14 @@
      data-title="Добави контакт"
      data-layout="tabstrip-layout"    
             data-show="app.contactsApi.init">
-            <input type="text" data-bind="value:name"/>
-            <input type="text" data-bind="value:number.value"/>
-            <a data-role="touch" data-tap="app.contactsApi.create">Запиши</a>
+            Име: <input type="text" data-bind="value:name"/>
+            <br>
+            Телефон: <input type="text" data-bind="value:number.value"/>
+            <img style="display:block;margin:5px auto; width:120px; height:120px;" id="smallImage" src="#" />
+            <div class="buttonArea">
+                <button data-role="touch" data-tap="app.pictures.get" class="login-button">Снимай</button>
+                <button data-role="touch" data-tap="app.contactsApi.create" class="login-button">Запиши</button>
+            </div>
         </div>
 		
 		
