@@ -67,12 +67,12 @@ var el = new Everlive({
     
     function watchGeoLocation(){
         
-        var options = { frequency: 3000, enableHighAccuracy: true, maximumAge: 10000};
+        var options = { frequency: 6000, enableHighAccuracy: true};
         
          watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
         
         function onSuccess(position) {        
-            var calculatedDistance=$('#dist').text() ||0;
+            var calculatedDistance=$('#dist').text() || 0;
             var lat1 = $('#currentPosLat').text();
             var lat2=position.coords.latitude;
             var lon1 = $('#currentPosLon').text();
@@ -83,14 +83,16 @@ var el = new Everlive({
             viewModel.set("currentPosLon",lon2);
             
             function distance(lon1, lat1, lon2, lat2) {
-              var R = 6371; // Radius of the earth in km
+              /*var R = 6371; // Radius of the earth in km
               var dLat = (lat2-lat1)*Math.PI/180;  // Javascript functions in radians
               var dLon = (lon2-lon1)*Math.PI/180; 
               var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
                       Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) * 
                       Math.sin(dLon/2) * Math.sin(dLon/2); 
               var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-              var d = R * c; // Distance in km
+              var d = (R * c)/1000; // Distance in km
+              console.log(d);*/
+              var d=Math.sqrt((lat2-lat1)*(lat2-lat1)+(lon2-lon1)*(lon2-lon1));
               return d;
             }
             
